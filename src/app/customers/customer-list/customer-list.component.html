@@ -14,11 +14,11 @@
       <td colspan="5" class="alert alert-danger" *ngIf="error$ | async as error">{{error}}</td>
     </tr> -->
     <tr>
-      <!-- <tr *ngFor="let customer of (customers$ | async)"> -->
-      <th scope="row">-</th>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
+    <tr *ngFor="let customer of customers">
+      <th scope="row">{{customer.name}}</th>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.membership}}</td>
       <th>
         <a>edit</a>
         <!-- <a (click)=editCustomer(customer)>edit</a> -->
