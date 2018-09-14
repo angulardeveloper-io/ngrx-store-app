@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { StoreModule } from "@ngrx/store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -11,7 +12,12 @@ import { NavbarComponent } from "./navbar/navbar.component";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent],
-  imports: [BrowserModule, StoreModule.forRoot({}), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument(),
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
