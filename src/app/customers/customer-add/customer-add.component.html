@@ -1,0 +1,29 @@
+<h3>Add Customer</h3>
+
+<form class="form-inline mb-4">
+  <!-- <form [formGroup]="customerForm" (submit)="createCustomer()" class="form-inline mb-4"> -->
+  <label class="sr-only" for="Name">Name</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <input type="text" class="form-control" formControlName="name" placeholder="name">
+  </div>
+
+  <label class="sr-only" for="Phone">Phone</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <input type="text" class="form-control" formControlName="phone" placeholder="Phone">
+  </div>
+
+  <label class="sr-only" for="Address">Address</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <input type="text" class="form-control" formControlName="address" placeholder="Address">
+  </div>
+
+  <label class="sr-only" for="membership">Membership</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <select formControlName="membership" class="form-control">
+      <option>Basic</option>
+      <option>Pro</option>
+      <option>Platinum</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Add Customer</button>
+</form>
